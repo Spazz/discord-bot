@@ -1,6 +1,6 @@
 var Discord = require("discord.js");
 var Eightball = require("./games/8ball.js");
-var config = require("config.js");
+var config = require("./config.js");
 
 var bot = new Discord.Client({autoReconnect: true});
 var ready = false;
@@ -16,12 +16,15 @@ bot.on("message", function(msg) {
 	if (msg.content.startsWith(prefix)) {
 		
 		if (msg.content.startsWith("!becky")) {becky()};
-		if (msg.content.startsWith("!8ball")) {
-			bot.sendMessage(msg.channel.id, Eightball.eightball(msg.content));
-		};
-
+		if (msg.content.startsWith("!8ball")) {bot.sendMessage(msg.channel.id, Eightball.eightball(msg.content));};
 	} else
-		return;
+		if (msg.content.startsWith("omg")) {
+			if (msg.content.includes("look at her butt", 0)) {
+				bot.sendMessage(msg.channel.id, "It is SO big", function(error) {
+					console.log(error);
+				})
+			}
+		}
 
 });
 
