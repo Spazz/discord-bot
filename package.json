@@ -1,0 +1,13 @@
+{
+  "name": "discord-history-bot",
+  "version": "1.0.0",
+  "description": "Writes out who joins/leaves voice channels in discord to a dedicated history text channel",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^8.0.0",
+    "pokedex-promise-v2": "^2.1.0",
+    "mathjs": "^3.3.0"
+  },
+  "author": "Brandon Loeffler",
+  "license": "MIT"
+}
